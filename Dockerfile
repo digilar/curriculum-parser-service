@@ -1,10 +1,8 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /src
+WORKDIR /src
 
-COPY . /usr/src/app
-
-EXPOSE 8088
+COPY . /src
 
 ENTRYPOINT ["./gradlew", "bootRun"]
