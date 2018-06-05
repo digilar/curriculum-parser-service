@@ -26,3 +26,16 @@ To run directly from source type: `gradlew bootRun`
 Set the property `curriculum.files_dir=<workdir>` to control where the curriculum files should be downloaded to or if you want to use a fixed version of the data.
 
 To use the service open http://localhost:8088
+
+## Build and run with Docker 
+
+### Build
+
+```bash
+docker build -t curriculum-service .
+```
+
+### Running
+
+```bash
+docker run --rm -p 8080:8088 curriculum-service
